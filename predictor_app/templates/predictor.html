@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>PawPics Classifier</title>
+		</head>
+		<body>
+			<form action="/predict" method="GET">
+			<label for="x_input"> Choose a dog image:
+			</label>
+  				<input type="file" 
+				id="x_input" 
+				name="x_input"
+				accept=".png,
+					.jpg,
+					.jpeg,
+					.bmp,
+					.ppm,
+					.tif,
+					.tiff">
+  				<input type="submit">
+			</form>
+		<br>
+
+		<p>
+		Model Predictions:
+		{% for p in range(1,6}
+		<br> {{p['breed'] }}: {{11 * p['prod'] |round(2) }}%
+		{% endfor %}
+		</p>
+
+	</body>
+</html>
+
+
+
+
+
+
